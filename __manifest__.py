@@ -15,6 +15,7 @@
 
     # always loaded
     'data': [
+        'security/ir.model.access.csv',
         'views/training_course_views.xml',
         'views/training_record_views.xml',
         'views/training_plan_views.xml',
@@ -23,9 +24,11 @@
 
         'views/hr_employee_views.xml',
         
-        'data/training_course_category_data.xml',
-        'data/training_plan_sequence.xml',,
+        'views/automated_actions.xml',
+        'views/email_templates.xml',
+        'views/report_training_history.xml',
     ],
+    'installable': True,
     'application': True,
     # only loaded in demonstration mode
     'demo': [

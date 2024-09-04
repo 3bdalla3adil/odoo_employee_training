@@ -11,7 +11,7 @@ class EmployeeSkill(models.Model):
     _inherit = 'hr.employee.skill'
     _description = 'Employee Skill'
 
-    name = fields.Char(string='Skill', required=True)
+    # name = fields.Char(string='Skill', required=True)
     description = fields.Text(string='Skill Description')
 
     course_ids = fields.Many2many('training.course', string='Related Courses')

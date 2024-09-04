@@ -2,10 +2,12 @@
 from odoo import models, fields, api
 
   #===========================================================================================================
-  #==== PIPELINE ============ EMPLOYEE INFO ==> TRAINING COURSE ==> TRAINING PLAN ============================
+  #==== PIPELINE ============ EMPLOYEE INFO ==> TRAINING PLAN ==> TRAINING COURSE ============================
   #===========================================================================================================
 
-  #ToDo:
+  #ToDo: Allow managers to create training plans for employees or roles.
+  #ToDo: A plan should outline the required courses and their due dates.
+  #ToDo:  Track the progress of employees against their plans.
 
 
 class TrainingPlan(models.Model):
@@ -26,3 +28,10 @@ class TrainingPlan(models.Model):
             completed_courses = len(plan.course_ids.filtered(lambda c: c in plan.employee_id.training_record_ids.mapped('course_id')))
             total_courses = len(plan.course_ids)
             plan.progress = (completed_courses / total_courses) * 100 if total_courses > 0 else 0
+
+    def _notify_overdue_training(self):
+        today = fields.Date.today()
+        overdue_plans = self.search([('due_date', '<', today), ('progress', '<', 100)])
+        for plan in overdue_plans:
+            template = self.env.ref('employee_training_records.email_template_overdue_training')
+            self.env['mail.template'].browse(template.id).send_mail(plan.id)

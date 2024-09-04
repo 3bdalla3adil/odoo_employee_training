@@ -6,6 +6,7 @@ from odoo import models, fields, api
   #===========================================================================================================
 
   #ToDo:Maintain a list of training courses (Title, Description, Duration, etc.)nts first
+  #ToDo:Categorize Courses (Technical ,Soft Skills, Saftey)
 
 
 class TrainingCourse(models.Model):
