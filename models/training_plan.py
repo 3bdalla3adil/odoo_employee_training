@@ -35,5 +35,5 @@ class TrainingPlan(models.Model):
         today = fields.Date.today()
         overdue_plans = self.search([('due_date', '<', today), ('progress', '<', 100)])
         for plan in overdue_plans:
-            template = self.env.ref('employee_training_records.email_template_overdue_training')
+            template = self.env.ref('odoo_employee_training.email_template_overdue_training')
             self.env['mail.template'].browse(template.id).send_mail(plan.id)
