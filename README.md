@@ -3,5 +3,5 @@
 [![Help](https://img.shields.io/badge/master-help-875A7B.svg?style=flat&colorA=8F8F8F)](https://www.odoo.com/forum/help-1)
 [![Nightly Builds](https://img.shields.io/badge/master-nightly-875A7B.svg?style=flat&colorA=8F8F8F)](https://nightly.odoo.com/)
 
-# odoo_stock_sale_commission
-An odoo module that calculate stock, sales commission based on companies commission  
+# odoo_employee_training
+Module to manage employee training records and skills. 
