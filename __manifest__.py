@@ -16,8 +16,8 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/training_course_views.xml',
-        'views/training_record_views.xml',
+        # 'views/training_course_views.xml',
+        # 'views/training_record_views.xml',
         'views/training_plan_views.xml',
 
         'views/employee_skill_views.xml',

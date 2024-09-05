@@ -5,8 +5,8 @@ from odoo import models, fields, api
   #==== PIPELINE ============ EMPLOYEE INFO ==> TRAINING COURSE ==> TRAINING RECORD ==========================
   #===========================================================================================================
 
-  #ToDo:Record when an employee completes a course (Date, Trainer, Score/Result if applicable)
-  #ToDo:Allow for attaching certificates or other relevant documents.
+  #ToDo:Record when an employee completes a course (Date, Trainer, Score/Result if applicable)DONE!
+  #ToDo:Allow for attaching certificates or other relevant documents.DONE!
 
 
 class TrainingRecord(models.Model):
