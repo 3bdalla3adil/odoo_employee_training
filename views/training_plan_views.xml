@@ -31,6 +31,13 @@
         </field>
     </record>
 
+    <!-- Action to manage training plans -->
+    <record id="action_training_plan" model="ir.actions.act_window">
+        <field name="name">Training Plans</field>
+        <field name="res_model">training.plan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <menuitem id="menu_training_plan" name="Training Plans" parent="hr.menu_hr_root"
               action="action_training_plan"/>
 </odoo>

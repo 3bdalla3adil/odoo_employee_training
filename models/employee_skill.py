@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
 
-  
-  #ToDo:Allow managers to assess and assign skills to employees.
-  #ToDo:linked Skills to training courses
+  #================================================================
+  #ToDo:Allow managers to assess and assign skills to employees.DONE!
+  #ToDo:linked Skills to training courses DONE!
+  #ToDo:Add a new page for Skills UNDER DEVELOPMENT
+  #================================================================
 
 
 class EmployeeSkill(models.Model):
@@ -11,7 +13,7 @@ class EmployeeSkill(models.Model):
     _inherit = 'hr.employee.skill'
     _description = 'Employee Skill'
 
-    name = fields.Char(string='Skill', required=True)
+    # name = fields.Char(string='Skill', required=True)
     description = fields.Text(string='Skill Description')
 
     course_ids = fields.Many2many('training.course', string='Related Courses')
